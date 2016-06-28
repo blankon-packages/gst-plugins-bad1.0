@@ -1,14 +1,163 @@
-gst-plugins-bad1.0 (1.4.5-2+b1blankon1) tambora; urgency=medium
+gst-plugins-bad1.0 (1.8.2-1blankon1) tambora; urgency=medium
 
-  * Rebuild 
+  * Change builddep libopencv-dev (>= 2.4.9.1+dfsg-2blankon1) 
 
- -- Mahyuddin <yudi.al@gmail.com>  Sat, 22 Aug 2015 14:44:32 +0700
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 28 Jun 2016 13:35:30 +0700
 
-gst-plugins-bad1.0 (1.4.5-2) unstable; urgency=medium
+gst-plugins-bad1.0 (1.8.2-1) unstable; urgency=medium
 
-  * Upload to unstable.
+  * New upstream bugfix release.
+  * debian/build-deps.in:
+    + Switch from OpenJPEG 1.5 to 2.1.
 
- -- Sebastian Dröge <slomo@debian.org>  Wed, 13 May 2015 12:27:42 +0300
+ -- Sebastian Dröge <slomo@debian.org>  Thu, 09 Jun 2016 11:32:08 +0300
+
+gst-plugins-bad1.0 (1.8.1-2) unstable; urgency=medium
+
+  * debian/build-deps.in:
+    + Patch by Tobias Frost to fix FTBFS on Hurd (Closes: #822675).
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 02 May 2016 08:55:41 +0300
+
+gst-plugins-bad1.0 (1.8.1-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 20 Apr 2016 18:18:02 +0300
+
+gst-plugins-bad1.0 (1.8.0-1) unstable; urgency=medium
+
+  * New upstream stable release:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build-depend on GStreamer >= 1.8.0.
+
+ -- Sebastian Dröge <slomo@debian.org>  Thu, 24 Mar 2016 12:32:02 +0200
+
+gst-plugins-bad1.0 (1.7.91-1) experimental; urgency=medium
+
+  * debian/build-deps.in:
+    + Remove libjasper-dev. It's unused and supposed to be removed soon.
+      (Closes: #818213).
+  * New upstream release candidate:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build-depend on GStreamer >= 1.7.91.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 02 Mar 2016 16:45:09 +0200
+
+gst-plugins-bad1.0 (1.7.90-1) experimental; urgency=medium
+
+  [ Iain Lane ]
+  * debian/watch: Fix to work with upstream locations
+
+  [ Sebastian Dröge ]
+  * New upstream release candidate:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build-depend on GStreamer >= 1.7.90.
+    + debian/gstreamer-plugins-bad.install:
+      - Ship new opusparse plugin, renamed from opus and only contains
+        the parser now.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue, 01 Mar 2016 17:25:00 +0200
+
+gst-plugins-bad1.0 (1.7.2-1) experimental; urgency=medium
+
+  * New upstream unstable release:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build-depend on GStreamer >= 1.7.2.
+      - Update faad dependency to >= 2.7 and rsvg to >= 2.36.2.
+    + debian/gstreamer-plugins-bad.install:
+      - Drop mpg123 (moved to -ugly) and rtpbad (moved to -good) plugins.
+      - Add new netsim plugin.
+    + debian/libgstreamer-plugins-bad*.install:
+      - Add new badaudio library.
+
+ -- Sebastian Dröge <slomo@debian.org>  Fri, 19 Feb 2016 11:29:54 +0200
+
+gst-plugins-bad1.0 (1.7.1-1) experimental; urgency=medium
+
+  * New upstream unstable release:
+    + debian/build-deps.in,
+      debian/rules:
+      - Build-depend on GLib >= 2.40 and GStreamer >= 1.7.1.
+      - Build-depend on libass >= 0.10.2.
+      - Build-depend on libdrm-dev.
+    + debian/gstreamer-plugins-base.install:
+      - Drop liveadder plugin and add new videoframe_audiolevel plugin.
+
+ -- Sebastian Dröge <slomo@debian.org>  Thu, 24 Dec 2015 14:23:55 +0100
+
+gst-plugins-bad1.0 (1.6.2-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 14 Dec 2015 19:33:55 +0100
+
+gst-plugins-bad1.0 (1.6.1-1) unstable; urgency=medium
+
+  * debian/control.in:
+    + Remove duplicated word from description (Closes: #800138).
+  * New upstream bugfix release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Fri, 02 Oct 2015 10:13:01 +0300
+
+gst-plugins-bad1.0 (1.6.0-1) unstable; urgency=medium
+
+  * New upstream stable release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Fri, 25 Sep 2015 23:02:02 +0200
+
+gst-plugins-bad1.0 (1.5.91-1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- Sebastian Dröge <slomo@debian.org>  Fri, 18 Sep 2015 19:39:16 +0200
+
+gst-plugins-bad1.0 (1.5.90-1) experimental; urgency=medium
+
+  * New upstream release candidate.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 19 Aug 2015 13:35:43 +0300
+
+gst-plugins-bad1.0 (1.5.2-1) experimental; urgency=medium
+
+  * New unstable upstream release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 24 Jun 2015 23:29:59 +0200
+
+gst-plugins-bad1.0 (1.5.1-1) experimental; urgency=medium
+
+  * New unstable upstream release.
+
+ -- Sebastian Dröge <slomo@debian.org>  Sun, 07 Jun 2015 11:03:58 +0200
+
+gst-plugins-bad1.0 (1.5.0.1+git20150513-1) experimental; urgency=medium
+
+  * New upstream GIT snapshot.
+
+ -- Sebastian Dröge <slomo@debian.org>  Wed, 13 May 2015 15:48:32 +0300
+
+gst-plugins-bad1.0 (1.5.0.1+git20150316-2) experimental; urgency=medium
+
+  * debian/libgstreamer-plugins-bad-dev.install:
+    + Include platform dependent GL headers.
+  * debian/libgstreamer-plugins-bad-dev.install,
+    debian/rules,
+    debian/build-deps.in:
+    + Include GObject-Introspection files for the libraries.
+
+ -- Sebastian Dröge <slomo@debian.org>  Mon, 23 Mar 2015 10:04:25 +0100
+
+gst-plugins-bad1.0 (1.5.0.1+git20150316-1) experimental; urgency=medium
+
+  * New upstream GIT snapshot:
+    + Add new bs2b, de265, x265, dtls, rtp plugins.
+    + Add ported vcd and bluez5 plugins.
+
+ -- Sebastian Dröge <slomo@debian.org>  Tue, 17 Mar 2015 09:42:54 +0100
 
 gst-plugins-bad1.0 (1.4.5-1) experimental; urgency=medium
 
